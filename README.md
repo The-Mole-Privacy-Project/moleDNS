@@ -25,7 +25,7 @@ This solution assumes resolvers cannot be trusted. In the age of big data and AI
 1. Clone this repo, or download it.
 2. Make sure you've installed Docker Desktop
 3. In the project folder, run `docker compose up`, or `docker compose up -d` to run in the background
-4. Your DNS server is now available at 127.0.0.1 on port 6053
+4. Your DNS server is now available at 127.0.0.2 (port 53)
 
 
 # Considerations
