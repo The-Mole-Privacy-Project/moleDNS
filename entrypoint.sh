@@ -92,7 +92,7 @@ ip addr add 127.0.0.2/32 dev lo	# add a second loopback device so we can listen 
 # --- tor instances --------------------------------------------------------
 
 run tor "$TOR_STYLE" tor \
-  --SocksPort 9050 \
+  --SocksPort 0.0.0.0:9050 \
   --ControlPort 127.0.0.1:9060 \
   --HashedControlPassword $TOR_PASSWORD_HASH \
   --DataDirectory /tmp/tor \

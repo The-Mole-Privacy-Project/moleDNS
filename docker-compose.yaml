@@ -11,9 +11,10 @@ services:
       # for the dnscrypt browser UI - hidden proxy
       - "9105:9105"
       # hidden metrics
-      - "9100"
+      - "9100:9100"
       # public metrics
-      - "9200"
+      - "9200:9200"
+      - "127.0.0.1:9050:9050"
     expose:
     # useful if you plan on providing services to other containers
       - "53/udp"
