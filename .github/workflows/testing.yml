@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "This job is now running on a ${{ runner.os }} server hosted by "
+      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - run: echo "Installing dnsutils"
       - name: Install dig
         run: sudo apt-get update && sudo apt-get install -y dnsutils
-
+      - run: echo "running container test"
       - name: Run container test
         run: |
           chmod +x tests/test-container.sh
